@@ -1,0 +1,23 @@
+---
+import Hamburger from "./Hamburger.astro"
+import Navigation from "./Navigation.astro"
+---
+
+
+<header>
+  <nav>
+    <div class="title-container">
+      <h1>Proyection</h1>
+      <Hamburger />
+    </div>
+    <Navigation />
+  </nav>
+</header>
+
+<style>
+  .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+</style>
