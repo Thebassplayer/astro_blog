@@ -1,6 +1,7 @@
 ---
 import Hamburger from "./Hamburger.astro"
 import Navigation from "./Navigation.astro"
+import ThemeIcon from './ThemeIcon.astro';
 ---
 
 
@@ -8,7 +9,10 @@ import Navigation from "./Navigation.astro"
   <nav>
     <div class="title-container">
       <h1>Proyection</h1>
-      <Hamburger />
+      <div class="buttons-nav-container">
+        <Hamburger />
+        <ThemeIcon />
+      </div>
     </div>
     <Navigation />
   </nav>
@@ -19,5 +23,13 @@ import Navigation from "./Navigation.astro"
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .buttons-nav-container {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    gap: 1rem;
   }
 </style>
