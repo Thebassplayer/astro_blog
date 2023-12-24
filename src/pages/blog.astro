@@ -1,32 +1,22 @@
 ---
-import Footer from "../components/Footer.astro"
+import BaseLayout from "../layouts/BaseLayout.astro";
 import "../styles/global.css"
 import Header from "../components/Header.astro";
 const pageTitle: string = "Blog";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Modern Dev Blog</title>
-	</head>
-	<body>
-    <Header />
+<BaseLayout>
+  <h1>{pageTitle}</h1>
+  <h2>Posts</h2>
 
-    <h1>{pageTitle}</h1>
-    <h2>Posts</h2>
-  
-    <p>Welcome to Modern Dev Blog</p>
-  
-    <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-   <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
-    <Footer />
-	</body>
-</html>
+  <p>Welcome to Modern Dev Blog</p>
+
+  <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
+ <ul>
+    <li><a href="/posts/post-1/">Post 1</a></li>
+    <li><a href="/posts/post-2/">Post 2</a></li>
+    <li><a href="/posts/post-3/">Post 3</a></li>
+  </ul>
+
+</BaseLayout>
+
